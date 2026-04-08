@@ -35,8 +35,7 @@ const Layout = ({ children, selectedPage, onSetPage }) => {
             <Header />
 
             <div style={styles.container}>
-                {/* Navigation */}
-                <NavBar />
+              
 
                 <div style={styles.main}>
                     {/* Sidebar */}
@@ -66,7 +65,6 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
-        minWidth: '100vw',
     },
     selected: {
         backgroundColor: '#999',
@@ -77,8 +75,9 @@ const styles = {
     },
     sidebar: {
         width: '200px',
-        backgroundColor: '#f4f4f4',
+        backgroundColor: '#5d6532',
         padding: '5px',
+        color: '#fdfbd4',
     },
     content: {
         flex: 1,

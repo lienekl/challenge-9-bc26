@@ -7,7 +7,7 @@ const Header = () => {
                 <h1>Liene Klavina</h1>
             </div>
             <div>
-                <img src="./assets/profile-picture.png" />
+                <img src="./assets/profile-picture.png" className="profileImg" />
             </div>
         </div>
     )

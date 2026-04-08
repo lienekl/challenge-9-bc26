@@ -1,7 +1,7 @@
 // App.js
 import { useState } from 'react';
 import Layout from './components/Layout';
-import HomePage from './pages/Homepage';
+import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/Portfoliopage';
 import ContactPage from './pages/Contactpage';
 
