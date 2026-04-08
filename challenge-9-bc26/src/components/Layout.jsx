@@ -1,6 +1,7 @@
-import NavBar from './NavBar'
+import React from 'react';
 import Footer from './Footer';
 import Header from './Header';
+
 
 const pages = [
     { name: 'Home', key: 'home' },
@@ -10,18 +11,14 @@ const pages = [
 
 const Layout = ({ children, selectedPage, onSetPage }) => {
 
-    // TODO: what's stored in children, selectedPage, and onSetPage?
+
 
     const renderPageLinks = () => {
 
-        // TODO: What does this function do?
         return pages.map(page => (
             <li
                 key={page.key}
-                style={{
-                    ...styles.sidebarLink,
-                    ...(page.key === selectedPage ? styles.selected : {}),
-                }}
+                className={`sidebar-link ${page.key === selectedPage ? 'selected' : ''}`}
                 onClick={() => onSetPage(page.key)}
             >
                 {page.name}
@@ -34,24 +31,24 @@ const Layout = ({ children, selectedPage, onSetPage }) => {
         <div>
             <Header />
 
-            <div style={styles.container}>
-              
+            <div className="layout-container">
 
-                <div style={styles.main}>
-                    {/* Sidebar */}
-                    <aside style={styles.sidebar}>
+
+                <div className="main-layout">
+
+                    <aside className="sidebar">
                         <ul>
                             {renderPageLinks()}
                         </ul>
                     </aside>
 
-                    {/* Content Area */}
-                    <section style={styles.content}>
+
+                    <section className="content-area">
                         {children}
                     </section>
                 </div>
 
-                {/* Footer */}
+
                 <Footer />
 
             </div>
@@ -59,42 +56,5 @@ const Layout = ({ children, selectedPage, onSetPage }) => {
     );
 };
 
-// Inline styles for simplicity
-const styles = {
-    container: {
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: '100vh',
-    },
-    selected: {
-        backgroundColor: '#999',
-    },
-    main: {
-        display: 'flex',
-        flex: 1,
-    },
-    sidebar: {
-        width: '200px',
-        backgroundColor: '#5d6532',
-        padding: '5px',
-        color: '#fdfbd4',
-    },
-    content: {
-        flex: 1,
-        padding: '20px',
-    },
-    footer: {
-        backgroundColor: '#333',
-        color: '#fff',
-        textAlign: 'center',
-        padding: '10px',
-    },
-    sidebarLink: {
-        display: 'block',
-        padding: '5px',
-        color: '#333',
-        textDecoration: 'none',
-    },
-};
 
 export default Layout;
