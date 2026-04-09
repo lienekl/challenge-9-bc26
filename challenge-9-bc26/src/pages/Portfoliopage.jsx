@@ -14,7 +14,7 @@ const PortfolioPage = () => {
     <div className="galleryContainer">
       <div className="galleryHeading">
         <h2>Portfolio Gallery</h2>
-        <p>Bellow are all project that I worked on during Full Stack Web Development Bootcamp.</p>
+        <p>Below are the core projects from my Full Stack Bootcamp. These challenges track my progress from building basic layouts to developing functional, responsive web applications.</p>
       </div>
 
 
