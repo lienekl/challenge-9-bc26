@@ -1,8 +1,8 @@
 # React Portfolio
-
 Welcome to my portfolio! This project is a comprehensive showcase of my journey transitioning from 15 years in online marketing to Front-End Development. It highlights my technical evolution through a series of weekly challenges completed during a Full-Stack Web Development Bootcamp.
 
-Technologies Used: 
+## Technologies Used:
+
 - Core: React.js, JavaScript (ES6+)
 - Styling: CSS3 (Flexbox, Grid, Custom Properties)
 - Routing: React Router DOM
